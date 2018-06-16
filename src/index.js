@@ -1,8 +1,23 @@
+//==================================================================================
+// Imported Packages For The App Routing
+//==================================================================================
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import Main from './pages/Main/Main';
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch
+} from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+//==================================================================================
+// Render Webpage Routes
+//==================================================================================
+ReactDOM.render(
+<Router>
+    <Switch>
+        <Route exact path = "/" component = {Main} />
+    </Switch>
+</Router>,
+document.getElementById('root'));

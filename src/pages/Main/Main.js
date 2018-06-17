@@ -31,16 +31,12 @@ class Main extends Component {
 
     animeRef = () => anime({
         targets: "#list .el",
-        translateX: function() {
-            return 500
-        },
-        translateY: function(el, i) {
-            return (i * 200);
-        },
-        rotate: function(el, i) {
-            return (5 * 360);
-        },
-        direction: 'alternate'
+        scale: {
+            value: 1.5,
+            duration: 900,
+            delay: 900,
+            easing: 'easeInOutQuart'
+        }
     });
 
 //==================================================================================
@@ -58,8 +54,7 @@ class Main extends Component {
                             key = { project.id }
                             in = {this.state.enter}
                             onEntering = {this.animeRef}
-                            appear = {true}
-                            timeout = {0}
+                            appear
                             mountOnEnter
                         >
                         {

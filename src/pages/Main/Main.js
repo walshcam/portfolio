@@ -3,49 +3,45 @@
 //==================================================================================
 import React, { Component } from 'react';
 import anime from 'animejs';
-import { TransitionGroup, Transition } from 'react-transition-group'
+import { TransitionGroup, Transition } from 'react-transition-group';
+// Import UI Elements
+import ProjectContainer from './../../components/ProjectContainer/ProjectContainer';
 
+// Test Data
 const data = [{
     id: 1,
-    datax: 160,
-    className: "small square el"
+    datax: 160
 },{
     id: 2,
-    datax: 80,
-    className: "small square el"
+    datax: 80
 },{
     id: 3,
-    datax: 250,
-    className: "small square el"
+    datax: 250
 }]
 
 class Main extends Component {
+
+    state = {
+        enter: true
+    }
 
 //==================================================================================
 // AnimeJS Functions
 //==================================================================================
 
-    animeRef = (project) => anime({
-        targets: project,
-        translateX: (project) => {
-            el.getAttribute(project.datax);
+    animeRef = () => anime({
+        targets: "#list .el",
+        translateX: function() {
+            return 500
         },
-        translateY: (el, i) => {
-            50 + (-50 * i);
+        translateY: function(el, i) {
+            return (i * 200);
         },
-        scale: (el, i, l) => {
-            (l - i) + .25
+        rotate: function(el, i) {
+            return (5 * 360);
         },
-        rotate: () => {anime.random(-360, 360);},
-        duration: () => {anime.random(1200,1800);},
-        duration: () => {anime.random(800, 1600);},
         direction: 'alternate'
     });
-
-
-    state = {
-
-    }
 
 //==================================================================================
 // Render The Page
@@ -54,14 +50,28 @@ class Main extends Component {
         return(
             <div>
                 Navbar With My Name?
-                <TransitionGroup>
-                    {data.map( project =>
+                <TransitionGroup
+                id = "list"
+                >
+                    {data.map( project => (
                         <Transition
                             key = { project.id }
+                            in = {this.state.enter}
+                            onEntering = {this.animeRef}
+                            appear = {true}
+                            timeout = {0}
+                            mountOnEnter
                         >
-                            
+                        {
+                            (status) => (
+                                <ProjectContainer
+                                    status = { status }
+                                    project = { project }
+                                />
+                            )
+                        }
                         </Transition>
-                    )}
+                    ))}
                 </TransitionGroup>
             </div>
         );

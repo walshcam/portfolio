@@ -4,17 +4,25 @@
 //==================================================================================
 import React from 'react';
 
-//Styling For Components
-const myStyle = {
-    width: '25px',
-    height: '25px',
-    margin: '20px',
-    backgroundColor: 'green'
-};
+const cardBodyStyle = {
+    width: '90%',
+    height: '0px',
+    paddingTop: '37.5%',
+    paddingBottom: '37.5%',
+    margin: "5%"
+}
+
+const cardStyle = {
+    marginBottom: '2%'
+}
 
 const ProjectContainer = (props) => (
-    <div style = {myStyle} className = "el">
-        {props.status}
+    <div className = {props.colclass}>
+        <div style = {cardStyle} className = "card">
+            <div style = {cardBodyStyle} className = {`card-body rounded ${props.cardclass}`}>
+                {props.project.title}
+            </div>
+        </div>
     </div>
 )
 

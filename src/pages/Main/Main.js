@@ -6,18 +6,41 @@ import anime from 'animejs';
 import { TransitionGroup, Transition } from 'react-transition-group';
 // Import UI Elements
 import ProjectContainer from './../../components/ProjectContainer/ProjectContainer';
+//Import Global Colors
+import '../../assets/css/color.css';
 
 // Test Data
 const data = [{
     id: 1,
-    datax: 160
+    title: "OpinWater",
+    link: "https://opinwater.herokuapp.com/",
+    github: "https://github.com/walshcam/Opinionated-Waters"
 },{
     id: 2,
-    datax: 80
+    title: "Clicky-Game",
+    link: "https://clickygame1000.herokuapp.com/",
+    github: "https://github.com/walshcam/clicky-game"
 },{
     id: 3,
-    datax: 250
-}]
+    title: "First Kid Bank",
+    link: "https://kidsfirstbank.herokuapp.com/",
+    github: "https://github.com/walshcam/kidsAllowance"
+},{
+    id: 4,
+    title: "Burger Menu",
+    link: "https://fathomless-shore-70165.herokuapp.com/",
+    github: "https://github.com/walshcam/burger"
+},{
+    id: 5,
+    title: "Travel-Log",
+    link: "https://benjaminjvaccaro.github.io/Travel-Log/",
+    github: "https://github.com/walshcam/Travel-Log"
+},{
+    id: 6,
+    title: "The Takeout Scraper",
+    link: "https://thetakeoutscraper.herokuapp.com/",
+    github: "https://github.com/walshcam/MongoScraper"
+},]
 
 class Main extends Component {
 
@@ -32,8 +55,8 @@ class Main extends Component {
     animeRef = () => anime({
         targets: "#list .el",
         scale: {
-            value: 1.5,
-            duration: 900,
+            value: 1.1,
+            duration: 2800,
             delay: 900,
             easing: 'easeInOutQuart'
         }
@@ -44,10 +67,11 @@ class Main extends Component {
 //==================================================================================
     render() {
         return(
-            <div>
+            <div className = "container">
                 Navbar With My Name?
                 <TransitionGroup
                 id = "list"
+                className = "row"
                 >
                     {data.map( project => (
                         <Transition
@@ -62,6 +86,8 @@ class Main extends Component {
                                 <ProjectContainer
                                     status = { status }
                                     project = { project }
+                                    colclass = {"col-12 col-md-6 col-lg-4"}
+                                    cardclass = {"el background-slate text-white"}
                                 />
                             )
                         }

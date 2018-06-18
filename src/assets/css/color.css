@@ -1,0 +1,42 @@
+/* Background Colors */
+.background-white{
+    background-color: #F7F6F5;
+}
+
+.background-slate{
+    background-color: #5081AB;
+}
+
+.background-teal{
+    background-color: #5DA78F;
+}
+
+.background-grey{
+    background-color: #636E6E;
+}
+
+.background-purple{
+    background-color: #323541;
+}
+
+/* Text Color */
+
+.text-white{
+    color: #F7F6F5;
+}
+
+.text-slate{
+    color: #5081AB;
+}
+
+.text-teal{
+    color: #5DA78F;
+}
+
+.text-grey{
+    color: #636E6E;
+}
+
+.text-purple{
+    color: #323541;
+}

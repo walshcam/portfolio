@@ -4,14 +4,6 @@
 import React from 'react';
 import './ProjectContainer.css'
 
-// const cardBodyStyle = {
-//     width: '90%',
-//     height: '0px',
-//     paddingTop: '37.5%',
-//     paddingBottom: '37.5%',
-//     margin: "5%"
-// }
-
 const cardStyle = {
     marginBottom: '2%'
 }

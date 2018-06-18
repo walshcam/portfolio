@@ -1,6 +1,5 @@
 //==================================================================================
 // Component that holds project information in the main page
-// This component contains animations for its mounting and unmounting.
 //==================================================================================
 import React from 'react';
 
@@ -19,9 +18,11 @@ const cardStyle = {
 const ProjectContainer = (props) => (
     <div className = {props.colclass}>
         <div style = {cardStyle} className = "card">
-            <div style = {cardBodyStyle} className = {`card-body rounded ${props.cardclass}`}>
-                {props.project.title}
-            </div>
+            <a href = {props.project.link}>
+                <div style = {cardBodyStyle} className = {`card-body rounded ${props.cardclass}`}>
+                    {props.project.title}
+                </div>
+            </a>
         </div>
     </div>
 )

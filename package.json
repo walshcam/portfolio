@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://walshcam.github.io/portfolio/",
   "private": true,
   "dependencies": {
     "animejs": "^2.2.0",
@@ -12,8 +11,6 @@
     "react-transition-group": "^2.3.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b build -d build",
     "start": "react-scripts start",  
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

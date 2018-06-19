@@ -21,9 +21,9 @@ const Info = () => (
         <InfoContainer
             header = {"More About Me"}
         >
-        <p>I was born and raised in Plymouth, MA. From there I left to attend Michigan State University. After graduating with a chemical engineering degree in 2012, I moved to Lafayette, LA to work for Baker Hughes, A GE Company.</p>
-        <p>After almost 6 years of service in their Pressure Pumping department as a Field Engineer, I left the company to move to Florida. This move was made to better take care of my family. My wife and I adopted my wife's little sister and we wanted her to go through high school in a location that contained immediate family.</p>
-        <p>When I'm not coding, I enjoy exploring Florida and playing fetch with my 4 dogs. None of them have yet to give me the stick back. One eats them.</p>
+            <p>I was born and raised in Plymouth, MA. From there I left to attend Michigan State University. After graduating with a chemical engineering degree in 2012, I moved to Lafayette, LA to work for Baker Hughes, A GE Company.</p>
+            <p>After almost 6 years of service in their Pressure Pumping department as a Field Engineer, I left the company to move to Florida. This move was made to better take care of my family. My wife and I adopted my wife's little sister and we wanted her to go through high school in a location that contained immediate family.</p>
+            <p>When I'm not coding, I enjoy exploring Florida and playing fetch with my 4 dogs. None of them have yet to give me the stick back. One eats them.</p>
         </InfoContainer>
     </Fragment>
 );

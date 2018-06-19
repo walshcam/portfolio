@@ -1,5 +1,5 @@
 //==================================================================================
-// Project Data
+// Project Data For Main Page
 //==================================================================================
 // Import Images
 import burgermenu from "../../assets/images/main/burgermenu.JPG";

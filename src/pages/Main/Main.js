@@ -6,8 +6,7 @@ import anime from 'animejs';
 import { TransitionGroup, Transition } from 'react-transition-group';
 // Import UI Elements
 import ProjectContainer from './../../components/ProjectContainer/ProjectContainer';
-import Navbar from './../../components/Navbar/Navbar';
-import Footer from "./../../components/Footer/Footer";
+import PageWrapper from './../PageWrapper';
 // Import Project Data
 import data from "./projects"
 //Import Global Colors
@@ -38,40 +37,34 @@ class Main extends Component {
 //==================================================================================
     render() {
         return(
-            <div className = "background-white">
-                <Navbar />
-                <div className = "container">
-                    <TransitionGroup
-                    id = "list"
-                    className = "row"
-                    >
-                        {data.map( project => (
-                            <Transition
-                                key = { project.id }
-                                in = {this.state.enter}
-                                onEntering = {this.animeRef}
-                                timeout = {0}
-                                appear
-                                mountOnEnter
-                            >
-                            {
-                                (status) => (
-                                    <ProjectContainer
-                                        status = { status }
-                                        project = { project }
-                                        colclass = {"col-12 col-md-6 col-lg-4"}
-                                        cardclass = {"el background-slate text-white"}
-                                    />
-                                )
-                            }
-                            </Transition>
-                        ))}
-                    </TransitionGroup>
-                </div>
-                <Footer
-                    colclass = {"col-12 col-md-6 col-lg-4"}
-                />
-            </div>
+            <PageWrapper>
+                <TransitionGroup
+                id = "list"
+                className = "row"
+                >
+                    {data.map( project => (
+                        <Transition
+                            key = { project.id }
+                            in = {this.state.enter}
+                            onEntering = {this.animeRef}
+                            timeout = {0}
+                            appear
+                            mountOnEnter
+                        >
+                        {
+                            (status) => (
+                                <ProjectContainer
+                                    status = { status }
+                                    project = { project }
+                                    colclass = {"col-12 col-md-6 col-lg-4"}
+                                    cardclass = {"el background-slate text-white"}
+                                />
+                            )
+                        }
+                        </Transition>
+                    ))}
+                </TransitionGroup>
+            </PageWrapper>
         );
     }
 

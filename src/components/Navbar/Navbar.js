@@ -2,16 +2,13 @@
 // The Website's Navbar
 //==================================================================================
 import React from 'react';
-
-const logoStyle = {
-    width: '200px'
-}
+import Logo from './../../assets/images/CameronLogoDarkBackground.png';
 
 const Navbar = () => (
     <nav className="navbar navbar-expand-lg navbar-dark background-purple text-white">
         {/* Logo */}
         <span className="navbar-brand mb-0">
-            <img style = {logoStyle} src = "/images/CameronLogoDarkBackground.png" alt = "logo" />
+            <div style = {{ width: '200px', height: "20px", backgroundSize: "cover", backgroundImage: `url(${Logo})`}}></div>
         </span>
 
         {/* Button When Collapsed */}

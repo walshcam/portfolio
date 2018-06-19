@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "animejs": "^2.2.0",
+    "radium": "^0.24.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",

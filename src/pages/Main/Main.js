@@ -6,7 +6,6 @@ import anime from 'animejs';
 import { TransitionGroup, Transition } from 'react-transition-group';
 // Import UI Elements
 import ProjectContainer from './../../components/ProjectContainer/ProjectContainer';
-import GithubButton from "./../../components/GitHubButton/GithubButton";
 import PageWrapper from './../PageWrapper';
 // Import Project Data
 import data from "./projects"

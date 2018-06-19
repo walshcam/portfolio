@@ -14,7 +14,9 @@ const Info = () => (
         <InfoContainer
             header = {"Coding Experience"}
         >
-            <p>I recently completed UCF's coding bootcamp with a grade average of A. Sample of my work can be found on the main page.</p>
+            <p>I recently completed UCF's coding bootcamp with a grade average of A. In this 3 month intensive class I learned technologies such as the full MERN stack (MongoDB, Express, React, Node.js), jQuery, MySQL, HTML, CSS and CSS Frameworks such as Bootstrap, and more!</p>
+            <p>Currently I am deepening my knowledge of the MERN stack with a focus on React. For example, this website is made using React.</p>
+            <p>Samples of my work can be found on the main page.</p>
         </InfoContainer>
 
         {/* More About Me */}

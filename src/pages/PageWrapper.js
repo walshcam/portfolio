@@ -13,7 +13,7 @@ const PageWrapper = ({children}) => (
             {children}
         </div>
         <Footer
-            colclass = {"col-12 col-md-6 col-lg-4"}
+            colclass = {"col-12 col-md-6"}
         />
     </div>
 );

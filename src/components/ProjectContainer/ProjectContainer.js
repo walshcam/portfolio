@@ -3,6 +3,7 @@
 //==================================================================================
 import React from 'react';
 import './ProjectContainer.css'
+import GithubButton from "./../GithubButton/GithubButton";
 
 const cardStyle = {
     marginBottom: '2%'
@@ -22,6 +23,10 @@ const ProjectContainer = (props) => (
                 </div>
             </a>
         </div>
+        <GithubButton
+            github = {props.project.github}
+            title = {props.project.title}
+        />
     </div>
 )
 

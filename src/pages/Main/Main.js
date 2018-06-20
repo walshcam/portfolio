@@ -2,8 +2,6 @@
 // Imported Packages For The Main Page
 //==================================================================================
 import React, { Component } from 'react';
-import anime from 'animejs';
-import { TransitionGroup, Transition } from 'react-transition-group';
 // Import UI Elements
 import ProjectContainer from './../../components/ProjectContainer/ProjectContainer';
 import PageWrapper from './../PageWrapper';
@@ -19,51 +17,20 @@ class Main extends Component {
     }
 
 //==================================================================================
-// AnimeJS Functions
-//==================================================================================
-
-    animeRef = () => anime({
-        targets: "#list .el",
-        scale: {
-            value: 1.1,
-            duration: 2800,
-            delay: 900,
-            easing: 'easeInOutQuart'
-        }
-    });
-
-//==================================================================================
 // Render The Page
 //==================================================================================
     render() {
         return(
             <PageWrapper>
-                <TransitionGroup
-                id = "list"
-                className = "row"
-                >
+                <div className = "row">
                     {data.map( project => (
-                        <Transition
-                            key = { project.id }
-                            in = {this.state.enter}
-                            onEntering = {this.animeRef}
-                            timeout = {0}
-                            appear
-                            mountOnEnter
-                        >
-                            {
-                                (status) => (
-                                    <ProjectContainer
-                                        status = { status }
-                                        project = { project }
-                                        colclass = {"col-12 col-md-6 col-lg-4"}
-                                        cardclass = {"el background-slate text-white"}
-                                    />
-                                )
-                            }
-                        </Transition>
+                        <ProjectContainer
+                            project = { project }
+                            colclass = {"col-12 col-md-6 col-lg-4"}
+                            cardclass = {"el background-slate text-white"}
+                        />
                     ))}
-                </TransitionGroup>
+                </div>
             </PageWrapper>
         );
     }

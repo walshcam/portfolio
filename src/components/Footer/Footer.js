@@ -18,7 +18,6 @@ const Footer = (props) => (
                     <div className = "h3"><strong>Current Page Technology</strong></div>
                     <p className = "h4"><strong>React</strong></p>
                     <p className = "mb-0"><strong>Routing: </strong>React Router</p>
-                    <p className = "mb-0"><strong>Animation: </strong>AnimeJS with React-Transition-Group</p>
                     <p className = "mb-0"><strong>CSS: </strong>Bootstrap with Radium</p>
                 </div>
             </div>
